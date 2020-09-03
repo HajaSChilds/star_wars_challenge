@@ -1,23 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import './App.scss';
+import star_wars_bg from './images/star_wars_bg.jpg';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="App-header" styles={{  backgroundImage:`url(${star_wars_bg})` }}>
+        <div className="title">
+          <h1>STAR WARS</h1>
+          <h2>Movie Release Timeline</h2>
+        </div>
       </header>
     </div>
   );
