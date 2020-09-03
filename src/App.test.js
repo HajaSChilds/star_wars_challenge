@@ -1,9 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
+import Timeline from '@material-ui/lab/Timeline';
 
-test('renders learn react link', () => {
+test('renders title', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
+  const linkElement = getByText(/STAR WARS/);
   expect(linkElement).toBeInTheDocument();
 });
+
