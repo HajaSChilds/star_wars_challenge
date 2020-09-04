@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: '6px 16px',
     color: 'white',
-    backgroundColor: 'transparent',
+    backgroundColor: 'black',
+    opacity:'0.7',
     fontSize: '0.5em',
     },
   

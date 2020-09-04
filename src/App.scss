@@ -3,7 +3,6 @@
   text-align: center;
 }
 
-// FADE IN TITLE /////////////////
 
 h1 {
   color:yellow;
@@ -17,12 +16,21 @@ h3 {
   color:white;
 }
 
+
+.title {
+  top: 40vh;
+  order:2;
+  left:50vw;
+  position:fixed;
+}
+
+
 .title h1 {
   color: rgb(255, 255, 0);
   font-style: italic;
 
  
-
+// -------------- FADE IN ANIMATION MAIN TITLE
     @media (prefers-reduced-motion: no-preference) {
       
       -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -82,12 +90,6 @@ h3 {
   }
 } 
 
-.title {
-  top: 40vh;
-  order:2;
-  left:50vw;
-  position:fixed;
-}
 
 .timeline-container {
   left:0px;
@@ -95,11 +97,50 @@ h3 {
   position: relative;
   justify-self: flex-start;
 
+  @media (prefers-reduced-motion: no-preference) {
+  animation-name: move;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: move;
+  animation-direction: vertical;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: vertical;
+  -webkit-animation-timing-function: linear;
+
+     
+    .timeline-container:hover {
+      animation-play-state:paused ;
+      -webkit-animation-play-state: paused;
+      
+    }
+    
+    @keyframes move{
+      0% {
+    		top: 100px;
+    	}
+    	100% {
+    		top: -1500px;
+    	}
+
+    }
+
+    @-webkit-keyframes move {
+    	0% {
+    		top: 100px;
+    	}
+    	100% {
+    		top: -1500px;
+    	}
+    }
+  }
+  
+
    @media only screen and (max-width: 1000px) {
       position: static;
       order:2;
-      left: 30vw;
-     
+      left: 30vw; 
     }
 
 }
