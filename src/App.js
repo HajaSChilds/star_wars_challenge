@@ -99,17 +99,19 @@ function App() {
       <header className="App-header">
         <div className="title">
           <h1>STAR WARS</h1>
-          <h2>Movie Release Timeline</h2>
+          <a href="https://github.com/HajaSChilds/star_wars_challenge">
+            <h2>Movie Release Timeline</h2>
+          </a>
         </div>
         <div className="timeline-container">
-          {loading?
-          <div className={classes.root}>
-            <LinearProgress />
-            <LinearProgress /> 
-          </div> :  
-          <Timeline align="alternate">
-            {mapTimeline()}
-          </Timeline> }
+          {loading ? (
+            <div className={classes.root}>
+              <LinearProgress />
+              <LinearProgress />
+            </div>
+          ) : (
+            <Timeline align="alternate">{mapTimeline()}</Timeline>
+          )}
         </div>
       </header>
     </div>

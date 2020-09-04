@@ -14,6 +14,14 @@ h3 {
 
 .title h2 {
   color:white;
+
+   &:hover {
+     color:greenyellow;
+  }
+}
+
+a {
+  text-decoration: none;
 }
 
 
@@ -99,42 +107,42 @@ h3 {
 
   @media (prefers-reduced-motion: no-preference) {
   animation-name: move;
-  animation-duration: 20s;
+  animation-duration: 50s;
   animation-iteration-count: infinite;
   -webkit-animation-name: move;
-  animation-direction: vertical;
   animation-timing-function: linear;
-  -webkit-animation-duration: 20s;
+  -webkit-animation-duration: 50s;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-direction: vertical;
   -webkit-animation-timing-function: linear;
 
-     
-    .timeline-container:hover {
-      animation-play-state:paused ;
-      -webkit-animation-play-state: paused;
-      
-    }
+
+    
     
     @keyframes move{
       0% {
-    		top: 100px;
+    		top: 200px;
     	}
     	100% {
-    		top: -1500px;
+    		top: -1800px;
     	}
 
     }
 
     @-webkit-keyframes move {
     	0% {
-    		top: 100px;
+    		top: 200px;
     	}
     	100% {
-    		top: -1500px;
+    		top: -1800px;
     	}
     }
   }
+   
+      &:hover {
+        animation-play-state:paused ;
+        -webkit-animation-play-state: paused;
+      
+      }
   
 
    @media only screen and (max-width: 1000px) {
