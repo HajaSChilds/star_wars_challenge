@@ -49,8 +49,7 @@ function App() {
       .then(data => { 
         setData(data.results); 
         setStatus(false); // Sets loading status to false when data loads
-        console.log("events", data.results);  
-        console.log("loading status: ", loading);  
+    
       })
       .catch(error => console.error(error, 'Timeout exceeded, unable to fetch movie data'))
   }, []) // useEffect only runs once with empty bracket second argument
