@@ -97,8 +97,13 @@
   }
 
   @media (max-width: 1000px) {
-      position:static;
+      position:fixed;
+      background-color: #202020;
+      opacity: 0.9;
+      top:0px;
+      left: auto;
       width: 100vw;
+      z-index: 10;
       order: 1;
   }
 }
@@ -163,7 +168,6 @@
       }
 
   @media (max-width: 1000px) {
-    position: static;
     order: 2;
     width: 100vw;
 
